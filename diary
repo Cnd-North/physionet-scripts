@@ -1,0 +1,7 @@
+diary off
+
+
+
+tempLQ = LQ*1.05
+
+mH_C = ( tempLQ > FQ )

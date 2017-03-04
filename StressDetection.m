@@ -31,8 +31,8 @@ clc;             % clears the command window and homes the cursor
 
 %% Initialize variables.
 
-% filename = '/Users/gerritvanrensburg/DataFiles/rrList.txt';
- filename = '/Users/gerritvanrensburg/CHF03.txt';
+ filename = '/Users/gerritvanrensburg/DataFiles/rrList.txt';
+% filename = '/Users/gerritvanrensburg/CHF03.txt';
 delimiter = ' ';
 
 disp(['Reading from filename: ', filename]);
@@ -327,6 +327,9 @@ tempPNN_TQ = PNN_TQ*1.09;
 
 
 
+    StressEvent = (mH_C .* RMSSD_C .* PNN_C);
+    
+    
 
 % get the total sum of all true events to count stress events
 %  mH_C = sum(mH_C(:))     

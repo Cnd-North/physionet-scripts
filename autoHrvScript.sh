@@ -17,9 +17,10 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 
 
 # Run the get_hrv function, on every record name in the text file (file name below at end of loop)
+# get_hrv is setup currenrtly for the nsr2db database
 # option ">> -fileName", pipelines the data striaght into a text file
 
-	get_hrv -s -M -F "0.2 20 -x 0.4 2.0" -p "20 50" nsr2db/$line ecg >> copy_file
+	get_hrv -s -M -F "0.2 20 -x 0.4 2.0" -p "20 50" nsr2db/$line ecg # >> copy_file
 
 	#output=`eval get_hrv -s -M -F "0.2 20 -x 0.4 2.0" -p "20 50" nsr2db/$line ecg`
     #echo "$output" >> logs
